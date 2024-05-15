@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v0.0.4
+
+[compare changes](https://github.com/aliothor/create-mtk-plugin/compare/v0.0.3...v0.0.4)
+
+### 🏡 Chore
+
+- 修改npm配置 ([4619e84](https://github.com/aliothor/create-mtk-plugin/commit/4619e84))
+
+### ❤️ Contributors
+
+- Pluto369 <1516544795@qq.com>
+
 ## v0.0.3
 
 [compare changes](https://github.com/aliothor/create-mtk-plugin/compare/v0.0.2...v0.0.3)
