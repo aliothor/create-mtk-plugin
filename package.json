@@ -1,0 +1,48 @@
+{
+  "name": "create-mtk-plugin",
+  "version": "0.0.0",
+  "description": "fast create maptalks plugin",
+  "homepage": "https://github.com/aliothor/create-mtk-plugin",
+  "repository": "https://github.com/aliothor/create-mtk-plugin.git",
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bunchee",
+    "dev": "vitest dev",
+    "lint": "eslint . && biome check .",
+    "lint:fix": "automd && eslint . --fix && biome check --apply .",
+    "prepack": "pnpm build",
+    "play": "tsx playground",
+    "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
+    "test": "pnpm lint && pnpm test:types && vitest run --coverage",
+    "test:types": "tsc --noEmit --skipLibCheck"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.3",
+    "@types/node": "^20.12.12",
+    "@vitest/coverage-v8": "^1.6.0",
+    "automd": "^0.3.7",
+    "bunchee": "^5.1.5",
+    "changelogen": "^0.5.5",
+    "eslint": "^9.2.0",
+    "eslint-config-unjs": "^0.3.1",
+    "tsx": "^4.10.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.6.0"
+  },
+  "packageManager": "pnpm@9.1.0"
+}
