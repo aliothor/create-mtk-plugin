@@ -12,7 +12,7 @@
     }
   },
   "vcs": {
-    "enabled": true,
+    "enabled": false,
     "clientKind": "git",
     "useIgnoreFile": true
   }

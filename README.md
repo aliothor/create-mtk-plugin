@@ -12,7 +12,7 @@ Fast create [maptalks](https://github.com/maptalks) plugin
 ## Usage
 
 ```sh
-# npx
+# npm
 npm create mtk-plugin
 
 # yarn

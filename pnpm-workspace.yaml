@@ -1,0 +1,9 @@
+packages:
+  - 'template-layer-js'
+  - 'template-layer-ts'
+  - 'template-control-js'
+  - 'template-control-ts'
+  - 'template-map-tool-js'
+  - 'template-map-tool-ts'
+  - 'template-ui-component-js'
+  - 'template-ui-component-ts'

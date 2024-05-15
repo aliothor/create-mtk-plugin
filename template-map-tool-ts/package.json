@@ -1,0 +1,38 @@
+{
+  "name": "maptalks-map-tool-ts-plugin",
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "require": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "bunchee",
+    "prepack": "npm build",
+    "release": "changelogen --release && npm publish && git push --follow-tags",
+    "test": "npm run test:types && vitest run --coverage",
+    "test:types": "tsc --noEmit --skipLibCheck"
+  },
+  "devDependencies": {
+    "bunchee": "^5.1.5",
+    "typescript": "^5.4.5",
+    "@vitest/coverage-v8": "^1.6.0",
+    "changelogen": "^0.5.5",
+    "vitest": "^1.6.0"
+  },
+  "peerDependencies": {
+    "maptalks": "1.0.0-rc.33"
+  }
+}
